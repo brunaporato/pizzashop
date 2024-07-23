@@ -8,6 +8,7 @@ import {
   Line,
   LineChart,
   ResponsiveContainer,
+  Tooltip,
   XAxis,
   YAxis,
 } from 'recharts'
@@ -80,6 +81,16 @@ export function IncomeChart() {
               />
 
               <CartesianGrid vertical={false} className="stroke-muted" />
+
+              <Tooltip
+                labelClassName="text-[#888]"
+                formatter={(value) =>
+                  Number(value).toLocaleString('en-US', {
+                    style: 'currency',
+                    currency: 'USD',
+                  })
+                }
+              />
 
               <Line
                 type="linear"
