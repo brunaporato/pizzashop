@@ -1,6 +1,6 @@
 import { useQuery } from '@tanstack/react-query'
 import { BarChart, Loader2 } from 'lucide-react'
-import { Cell, Pie, PieChart, ResponsiveContainer } from 'recharts'
+import { Cell, Pie, PieChart, ResponsiveContainer, Tooltip } from 'recharts'
 import color from 'tailwindcss/colors'
 
 import { getPopularProducts } from '@/api/get-popular-products'
@@ -84,6 +84,7 @@ export function PopularProductsChart() {
                   />
                 ))}
               </Pie>
+              <Tooltip labelClassName="text-[#888]" />
             </PieChart>
           </ResponsiveContainer>
         ) : (
