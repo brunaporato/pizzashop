@@ -8,7 +8,8 @@
     "build": "tsc -b && vite build",
     "lint": "eslint . --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "test": "vitest"
+    "test": "vitest",
+    "dev:test": "vite --port 5078 --mode test"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.0",
@@ -54,11 +55,17 @@
     "autoprefixer": "^10.4.19",
     "eslint": "^8.55.0",
     "eslint-plugin-simple-import-sort": "^12.1.1",
+    "msw": "^2.3.4",
     "postcss": "^8.4.39",
     "prettier-plugin-tailwindcss": "^0.6.5",
     "tailwindcss": "^3.4.5",
     "typescript": "^5.2.2",
     "vite": "^5.3.1",
     "vitest": "^2.0.4"
+  },
+  "msw": {
+    "workerDirectory": [
+      "public"
+    ]
   }
 }
