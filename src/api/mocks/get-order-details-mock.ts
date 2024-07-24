@@ -9,7 +9,7 @@ export const getOrderDetailsMock = http.get<
   GetOrderDetailsParams,
   never,
   GetOrderDetailsResponse
->('/order/:orderId', ({ params }) => {
+>('/orders/:orderId', ({ params }) => {
   return HttpResponse.json({
     id: params.orderId,
     customer: {
